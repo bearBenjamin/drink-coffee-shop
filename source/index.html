@@ -52,7 +52,7 @@
         <span class="button-toggle__text visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <arcticle class="header__hero hero">
+    <section class="header__hero hero">
       <h1 class="header__title visually-hidden">Магазин кофейных напитков</h1>
       <div class="hero__wrapper wrapper">
         <div class="hero__slider-conteiner">
@@ -63,8 +63,8 @@
                   <img class="hero__slider-item-img" src="#" width="280" height="280" alt="Банка с новым кофейным напитком" loading="lazy">
                 </picture>
               </div>
-              <h3 class="hero__slider-secondary-title">Новинка!</h3>
-              <h2 class="hero__slider-title">Декаф Флэт Уайт</h2>
+              <h2 class="hero__slider-secondary-title">Новинка!</h2>
+              <h3 class="hero__slider-title">Декаф Флэт Уайт</h3>
               <p class="hero__slider-desriptions">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
               <div class="hero__slider-price-container">
                 <p class="hero__slider-old-price"><del>295 ₽</del></p>
@@ -78,8 +78,8 @@
                   <img class="hero__slider-item-img" src="#" width="280" height="280" alt="Банка с новым кофейным напитком" loading="lazy">
                 </picture>
               </div>
-              <h3 class="hero__slider-secondary-title">Новинка!</h3>
-              <h2 class="hero__slider-title">Лавандовый Латте</h2>
+              <h2 class="hero__slider-secondary-title">Новинка!</h2>
+              <h3 class="hero__slider-title">Лавандовый Латте</h3>
               <p class="hero__slider-desriptions">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
               <div class="hero__slider-price-container">
                 <p class="hero__slider-old-price"><del>285 ₽</del></p>
@@ -93,8 +93,8 @@
                   <img class="hero__slider-item-img" src="#" width="280" height="280" alt="Банка с новым кофейным напитком" loading="lazy">
                 </picture>
               </div>
-              <h3 class="hero__slider-secondary-title">Новинка!</h3>
-              <h2 class="hero__slider-title">Тройной Эспрессо</h2>
+              <h2 class="hero__slider-secondary-title">Новинка!</h2>
+              <h3 class="hero__slider-title">Тройной Эспрессо</h3>
               <p class="hero__slider-desriptions">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
               <div class="hero__slider-price-container">
                 <p class="hero__slider-old-price"><del>395 ₽</del></p>
@@ -105,13 +105,13 @@
           </ul>
         </div>
       </div>
-    </arcticle>
+    </section>
   </header>
   <main class="main">
     <section class="main__advantages advantages">
       <div class="advantages__wrapper wrapper">
-        <h3 class="advantages__secondary-title">Преимущества</h3>
-        <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
+        <h2 class="advantages__secondary-title">Преимущества</h2>
+        <h3 class="advantages__title">Главные причины выбрать Drink2Go</h3>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item-speed">
             <h2 class="advantages__title">Скорость</h2>
@@ -134,9 +134,9 @@
     </section>
     <section class="main__form-catalog form-catalog">
       <div class="form-catalog__wrapper wrapper">
-        <h3 class="form-catalog__secondary-title">Каталог</h3>
-        <h2 class="form-catalog__title">Каталог кофейных напитков</h2>
-        <from class="form-catalog__form" action="https://echo.htmlacademy.ru" method="GET" id="form-catalog">
+        <h2 class="form-catalog__secondary-title">Каталог</h2>
+        <h3 class="form-catalog__title">Каталог кофейных напитков</h3>
+        <form class="form-catalog__form" action="https://echo.htmlacademy.ru" method="GET" id="form-catalog">
           <fieldset class="form-catalog__filter-group">
             <legend class="form-catalog__filter-title">Цена</legend>
             <div class="form-catalog__slider-container"></div>
@@ -225,14 +225,14 @@
             <button class="form-catalog__button form-catalog__button-submit" type="submit">Применить</button>
             <button class="form-catalog__button form-catalog__button-reset" type="reset">Сбросить</button>
           </div>
-        </from>
+        </form>
       </div>
     </section>
     <section class="main__catalog catalog">
       <h2 class="catalog__title visually-hidden">Список выбранных товаров</h2>
       <div class="catalog__wrapper wrapper">
         <div class="catalog__select">
-          <select class="catalog__select-control" from="form-catalog" name="sort-product" aria-label="Сортировка">
+          <select class="catalog__select-control" form="form-catalog" name="sort-product" aria-label="Сортировка">
             <option value="by default">по умолчанию</option>
           </select>
         </div>
@@ -254,7 +254,7 @@
                 <img class="catalog__item-img" src="#" width="130" height="188" alt="Банка с кофейным напитком" loading="lazy">
               </picture>
             </div>
-            <h2 class="catalog__item-title"></h2>
+            <h2 class="catalog__item-title">Декаф Флэт Уайт</h2>
             <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
             <p class="catalog__item-price">225₽</p>
             <button class="catalog__item-button" type="button">В корзину</button>

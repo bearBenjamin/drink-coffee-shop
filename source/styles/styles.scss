@@ -2,6 +2,22 @@
 @import "./common/variables.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/wrapper.scss";
+@import "./blocks/title.scss";
+@import "./blocks/title-secondary.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
 @import "./blocks/header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/button-toggle.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/main.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/form-catalog.scss";
+@import "./blocks/form.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";

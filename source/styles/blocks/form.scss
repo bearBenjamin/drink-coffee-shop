@@ -1,37 +1,230 @@
-// .form {}
+.form {
+  color: $base-black;
+  background-color: $bg-lightest-grey;
+}
 
-// .form__filter-group {}
+.form__filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
 
-// .form__filter-title {}
+.form__filter-title {
+  margin-bottom: 20px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
 
-// .form__slider-container {}
+.form__slider-container {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
 
-// .form__price-container {}
+.form__slider-line {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: $alt-light-grey;
+}
 
-// .form__price-input {}
+.form__slider-bar {
+  position: absolute;
+  top: -1px;
+  width: 241px;
+  height: 4px;
+  background-color: $alt-primary-lighter;
+}
+
+.form__slider-btn-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border: 2px solid $alt-primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form__slider-btn-min {
+  left: 0;
+}
+
+.form__slider-btn-max {
+  right: 0;
+}
+
+.form__price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.form__price-input {
+  width: 118px;
+  height: 40px;
+  padding: 8px 10px;
+  border: 2px solid $alt-primary-lighter;
+  border-radius: 4px;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+
+  &::placeholder {
+    color: $base-grey;
+  }
+}
 
 // .form__price-min {}
 
-// .form__price-separator {}
+.form__price-separator {
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey;
+}
 
 // .form__price-max {}
 
-// .form__filter-list {}
+.form__filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-// .form__filter-item {}
+.form__filter-item {
+  margin-bottom: 12px;
+}
 
-// .form__control {}
+.form__control {
+  position: relative;
+  padding-left: 34px;
+  display: block;
+}
+
+.form__control-checkbox {
+  position: relative;
+  padding-left: 52px;
+  display: block;
+}
 
 // .form__control-input {}
 
-// .form__control-marker-radio {}
+.form__control-marker-radio {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $base-grey;
+}
 
-// .form__control-label {}
+.form__control-marker-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $base-grey;
+  transition: 4ms;
+}
 
-// .form__control-marker-checkbox {}
+.form__control-marker-checkbox::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  background-color: $base-white;
+  transition: 4ms;
+}
 
-// .form__button-container {}
+.form__control-input:checked + .form__control-marker-checkbox {
+  background-color: $base-primary;
+}
 
-// .form__button-submit {}
+.form__control-input:checked + .form__control-marker-checkbox::before {
+  transform: translateX(18px);
+}
 
-// .form__button-reset {}
+.form__control:hover .form__control-marker-radio {
+  border-color: $base-primary;
+}
+
+.form__control:hover .form__control-marker-radio::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $alt-primary-lighter;
+}
+
+.form__control-input:disabled + .form__control-marker-radio {
+  border-color: $alt-light-grey;
+}
+
+.form__control-input:disabled + .form__control-marker-checkbox {
+  background-color: $alt-light-grey;
+}
+
+.form__control:has(.form__control-input:disabled),
+.form__control-checkbox:has(.form__control-input:disabled) {
+  cursor: not-allowed;
+  color: $alt-light-grey;
+}
+
+.form__control-input[type="radio"]:disabled:hover + .form__control-marker-radio::before {
+  background-color: $alt-light-grey;
+}
+
+.form__control-input[type="radio"]:checked + .form__control-marker-radio {
+  border-color: $base-primary;
+}
+
+.form__control-input[type="radio"]:checked + .form__control-marker-radio::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $base-primary;
+}
+
+.form__button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__button-submit {
+  border-radius: 4px;
+}
+
+.form__button-reset {
+  border-radius: 4px;
+  color: $base-primary;
+  background-color: $base-white;
+}

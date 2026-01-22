@@ -1,4 +1,7 @@
 .button {
+  margin: 0;
+  padding: 8px 91.5px;
+  border: none;
   font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
@@ -7,3 +10,4 @@
   color: $base-white;
   background-color: $base-primary;
 }
+

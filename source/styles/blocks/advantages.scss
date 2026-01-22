@@ -1,23 +1,115 @@
-// .advantages {}
+.advantages {
+  color: $base-black;
+  background-color: $base-white;
+}
 
 // .advantages__wrapper {}
 
-// .advantages__secondary-title {}
+.advantages__secondary-title {
+  margin: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 4px;
+}
 
-// .advantages__title {}
+.advantages__title {
+  margin: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 36px;
+  text-align: center;
+}
 
-// .advantages__list {}
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-// .advantages__item {}
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 
-// .advantages__item-title {}
+.advantages__item {
+  position: relative;
+  padding-top: 66px;
+  text-align: center;
+}
 
-// .advantages__text {}
+.advantages__item-title {
+  margin: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
 
-// .advantages__item-speed {}
+.advantages__text {
+  width: fit-content;
+  margin: 0;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: $base-black;
+}
 
-// .advantages__item-convenience {}
+.advantages__item-speed::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../icons/stack.svg#speed");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-// .advantages__item-cheerfulness {}
+.advantages__item-convenience::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../icons/stack.svg#convenience");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-// .advantages__item-environmental {}
+.advantages__item-cheerfulness::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../icons/stack.svg#cheerfulness");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.advantages__item-environmental::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../icons/stack.svg#environmental");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

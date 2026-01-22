@@ -1,9 +1,22 @@
-// .main {}
+.main {
+  color: $base-black;
+  background-color: $base-white;
+}
 
-// .main__advantages {}
+.main__advantages {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
 
-// .main__form-catalog {}
+.main__form-catalog {
+  padding-top: 50px;
+  padding-bottom: 36px;
+}
 
-// .main__catalog {}
+.main__catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 // .main__map {}

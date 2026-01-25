@@ -23,29 +23,34 @@
             </picture>
           </div>
         </a>
+        <p class="main-nav__description-logo">Интернет-магазин<br>кофейных напитков</p>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
-            <a class="main-nav__item-link main-nav__item-link--current" href="#">Главная</a>
+            <!-- linthtml-disable htmlacademy/tag-req-attr -->
+            <a class="main-nav__item-link main-nav__item-link--current">Главная</a>
+            <!-- lingthtml-enabled htmlacademy/tag-req-attr -->
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Каталог</a>
+            <a class="main-nav__item-link" href="404.html">Каталог</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">Доставка</a>
+            <a class="main-nav__item-link" href="404.html">Доставка</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="#">О нас</a>
+            <a class="main-nav__item-link" href="404.html">О нас</a>
           </li>
         </ul>
         <ul class="main-nav__secondary-list">
           <li class="main-nav__secondary-item">
-            <a class="main-nav__secondary-item-link main-nav__secondary-item-link--user" href="#">
+            <a class="main-nav__secondary-item-link main-nav__secondary-item-link--user" href="404.html">
               <span class="visually-hidden">Личный кабинет</span>
+              <span class="main-nav__text">Вoйти</span>
             </a>
           </li>
           <li class="main-nav__secondary-item">
-            <a class="main-nav__secondary-item-link main-nav__secondary-item-link--basket" href="#">
+            <a class="main-nav__secondary-item-link main-nav__secondary-item-link--basket" href="404.html">
               <span class="visually-hidden">Корзина</span>
+              <span class="main-nav__text">Корзина</span>
             </a>
           </li>
         </ul>
@@ -73,7 +78,7 @@
                 </div>
                 <h2 class="title-secondary slider__gallery-item-secondary-title">Новинка!</h2>
                 <h3 class="title slider__gallery-item-title">Декаф Флэт Уайт</h3>
-                <p class="slider__gallery-item-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                <p class="slider__gallery-item-description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
                 <div class="slider__price-container">
                   <p class="slider__old-price">295₽</p>
                   <p class="slider__new-price">225₽</p>
@@ -95,8 +100,8 @@
                 <h3 class="title slider__gallery-item-title">Лавандовый Латте</h3>
                 <p class="slider__gallery-item-description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
                 <div class="slider__price-container">
-                  <p class="slider__old-price"><del>285 ₽</del></p>
-                  <p class="slider__new-price">265 ₽</p>
+                  <p class="slider__old-price">285₽</p>
+                  <p class="slider__new-price">265₽</p>
                   <button class="button slider__item-button" type="button">Заказать</button>
                 </div>
               </li>
@@ -115,8 +120,8 @@
                 <h3 class="title slider__gallery-item-title">Тройной Эспрессо</h3>
                 <p class="slider__gallery-item-description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                 <div class="slider__price-container">
-                  <p class="slider__old-price"><del>395 ₽</del></p>
-                  <p class="slider__new-price">375 ₽</p>
+                  <p class="slider__old-price">395₽</p>
+                  <p class="slider__new-price">375₽</p>
                   <button class="button slider__item-button" type="button">Заказать</button>
                 </div>
               </li>
@@ -129,6 +134,25 @@
             <button class="slider__btn slider__btn-next" type="button">
               <span class="visually-hidden">Показать следующий слайд</span>
             </button>
+          </div>
+          <div class="slider__pagination-container">
+            <ol class="slider__paginations">
+              <li class="slider__paginations-item">
+                <button class="slider__paginations-btn slider__paginations-btn--current" type="button">
+                  <span class="visually-hidden">Первый слайдер</span>
+                </button>
+              </li>
+              <li class="slider__paginations-item">
+                <button class="slider__paginations-btn" type="button">
+                  <span class="visually-hidden">Второй слайдер</span>
+                </button>
+              </li>
+              <li class="slider__paginations-item">
+                <button class="slider__paginations-btn" type="button">
+                  <span class="visually-hidden">Третий слайдер</span>
+                </button>
+              </li>
+            </ol>
           </div>
         </div>
       </div>
@@ -146,7 +170,7 @@
           </li>
           <li class="advantages__item advantages__item-convenience">
             <h3 class="title advantages__item-title">Удобство</h3>
-            <p class="advantages__text">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
+            <p class="advantages__text">Легко помещается и в карман, и в маленькую сумочку</p>
           </li>
           <li class="advantages__item advantages__item-cheerfulness">
             <h3 class="title advantages__item-title">Бодрость</h3>
@@ -186,7 +210,7 @@
               <label class="visually-hidden" for="max">Максимальная цена</label>
             </div>
           </fieldset>
-          <fieldset class="form__filter-group">
+          <fieldset class="form__filter-group form__filter-is-milk">
             <legend class="form__filter-title">Наличие молока</legend>
             <ul class="form__filter-list">
               <li class="form__filter-item">
@@ -260,15 +284,18 @@
             </ul>
           </fieldset>
           <div class="form__button-container">
-            <button class="button form__button-submit" type="submit">Применить</button>
-            <button class="button form__button-reset" type="reset">Сбросить</button>
+            <button class="button form__button form__button-submit" type="submit">Применить</button>
+            <button class="button form__button form__button-reset" type="reset">Сбросить</button>
           </div>
         </form>
         <div class="main__catalog catalog">
           <div class="catalog__select">
-            <select class="catalog__select-control" form="form-catalog" name="sort-product" aria-label="Сортировка">
-              <option value="by default">по умолчанию</option>
-            </select>
+            <h2 class="title catalog__select-title">Сортировка:</h2>
+            <div class="catalog__select-wrapper">
+              <select class="catalog__select-control" form="form-catalog" name="sort-product" aria-label="Сортировка">
+                <option value="by default">по умолчанию</option>
+              </select>
+            </div>
           </div>
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -346,21 +373,23 @@
           </ul>
           <nav class="catalog__pagination" aria-label="Навигация по каталогу продукции">
             <button class="catalog__pagination-arrow catalog__pagination-arrow--prev" type="button">
-              <span class="visually-hidden">Предыдущая страница</span>
+              <span class="catalog__pagination-name-btn">Назад</span>
             </button>
             <ul class="catalog__pagination-list">
               <li class="catalog__pagination-item">
                 <a class="catalog__pagination-link" href="404.html">1</a>
               </li>
               <li class="catalog__pagination-item catalog__pagination-item--current">
-                <a class="catalog__pagination-link catalog__pagination-link--current" href="#">2</a>
+                <!-- linthtml-disable htmlacademy/tag-req-attr -->
+                <a class="catalog__pagination-link catalog__pagination-link--current">2</a>
+                <!-- linthml-enabled htmlacademy/tag-req-attr -->
               </li>
               <li class="catalog__pagination-item">
-                <a class="catalog__pagination-link" href="#">3</a>
+                <a class="catalog__pagination-link" href="404.html">3</a>
               </li>
             </ul>
             <button class="catalog__pagination-arrow catalog__pagination-arrow--next" type="button">
-              <span class="visually-hidden">Следующая страница</span>
+              <span class="catalog__pagination-name-btn">Вперёд</span>
             </button>
           </nav>
         </div>
@@ -369,85 +398,94 @@
     <section class="main__map map">
       <h2 class="title-secondary visually-hidden">Как до нас добраться</h2>
       <div class="map__wrapper wrapper">
-        <!-- <div class="map__img-container">
+        <div class="map__img-container">
           <picture>
-            <source width="2880" height="1080" type="image/webp" srcset="images/map@1x.webp 1x, images/map@2x.webp 2x">
-            <img class="map__img" src="images/map@1x.png" srcset="images/map@2x.png" width="2880" height="1080" alt="Карта с адресом магазина">
+            <source width="1440" height="540" type="image/webp" media="(min-width: 1440px)" srcset="images/map-coffee-desktop@1x.webp 1x, images/map-coffee-desktop@2x.webp 2x">
+            <source width="768" height="480" type="image/webp" media="(min-width: 768px)" srcset="images/map-coffee-tablet@1x.webp 1x, images/map-coffee-tablet@2x.webp 2x">
+            <source width="320" height="420" type="image/webp" srcset="images/map-coffee-mobile@1x.webp 1x, images/map-coffee-mobile@2x.webp 2x">
+            <source width="1440" height="540" type="image/jpg" media="(min-width: 1440px)" srcset="images/map-coffee-desktop@1x.png 1x, images/map-coffee-desktop@2x.png 2x">
+            <source width="768" height="480" type="image/jpg" media="(min-width: 768px)" srcset="images/map-coffee-tablet@1x.png 1x, images/map-coffee-tablet@2x.png 2x">
+            <img class="map__img" src="images/map-coffee-mobile@1x.png" srcset="images/map-coffee-mobile@2x.png" width="320" height="420" alt="Карта с адресом магазина">
           </picture>
-        </div> -->
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper wrapper">
-      <a class="footer__logo" href="#">
-        <div class="footer__logo-img-wrapper">
-          <picture>
-            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="170" height="36" type="image/svg+xml">
-            <img class="footer__logo-img" src="images/logo-tablet.svg" width="82" height="36" alt="Логотип кофейного магазина" loading="lazy">
-          </picture>
-        </div>
-      </a>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a class="footer__social-link footer__social-link--vk" href="#">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link footer__social-link--pin" href="#">
-            <span class="visually-hidden">Пинтерес</span>
-          </a>
-        </li>
-        <li class="footer__social-item">
-          <a class="footer__social-link footer__social-link--ok" href="#">
-            <span class="visually-hidden">Однокласники</span>
-          </a>
-        </li>
-      </ul>
-      <div class="footer__shop-nav-container">
+      <section class="footer__social-container">
+        <h2 class="title-secondary visually-hidden">Мы в социальных сетях</h2>
+        <a class="footer__logo" href="index.html">
+          <div class="footer__logo-img-wrapper">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="170" height="36" type="image/svg+xml">
+              <img class="footer__logo-img" src="images/logo-tablet.svg" width="82" height="36" alt="Логотип кофейного магазина" loading="lazy">
+            </picture>
+          </div>
+        </a>
+        <p class="footer__logo-text">Интернет-магазин кофейных напитков</p>
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--vk" href="404.html">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--pin" href="404.html">
+              <span class="visually-hidden">Пинтерес</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link footer__social-link--ok" href="404.html">
+              <span class="visually-hidden">Однокласники</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer__shop-nav-container">
         <h2 class="title-secondary footer__shop-nav-title">Интернет-магазин</h2>
         <ul class="footer__shop-nav">
           <li class="footer__shop-nav-item">
-            <a class="footer__shop-nav-link" href="#">Каталог</a>
+            <a class="footer__shop-nav-link" href="404.html">Каталог</a>
           </li>
           <li class="footer__shop-nav-item">
-            <a class="footer__shop-nav-link" href="#">Доставка</a>
+            <a class="footer__shop-nav-link" href="404.html">Доставка</a>
           </li>
           <li class="footer__shop-nav-item">
-            <a class="footer__shop-nav-link" href="#">Способы оплаты</a>
+            <a class="footer__shop-nav-link" href="404.html">Способы оплаты</a>
           </li>
           <li class="footer__shop-nav-item">
-            <a class="footer__shop-nav-link" href="#">О нас</a>
+            <a class="footer__shop-nav-link" href="404.html">О нас</a>
           </li>
         </ul>
-      </div>
-      <div class="footer__media-nav-container">
+      </section>
+      <section class="footer__media-nav-container">
         <h2 class="title-secondary footer__media-nav-title">Медиа</h2>
         <ul class="footer__media-nav-list">
           <li class="footer__media-nav-item">
-            <a class="footer__media-nav-link" href="#">Блог</a>
+            <a class="footer__media-nav-link" href="404.html">Блог</a>
           </li>
           <li class="footer__media-nav-item">
-            <a class="footer__media-nav-link" href="#">Информация для СМИ</a>
+            <a class="footer__media-nav-link" href="404.html">Информация для СМИ</a>
           </li>
           <li class="footer__media-nav-item">
-            <a class="footer__media-nav-link" href="#">Правовая информация</a>
+            <a class="footer__media-nav-link" href="404.html">Правовая информация</a>
           </li>
         </ul>
-      </div>
-      <div class="footer__contact-list-container">
+      </section>
+      <section class="footer__contact-list-container">
+        <h2 class="title-secondary footer__contact-list-title">Контакты</h2>
         <ul class="footer__contact-list">
           <li class="footer__contact-item">
-            <a class="footer__contact-link footer__contact-link--coordinat" href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+            <a class="footer__contact-link footer__contact-link--coordinat" href="https://maps.app.goo.gl/UYiyJ8GyPQua2Kwv8" target="_blank" rel="noopener noreferrer">Санкт-Петербург, набережная реки Карповки, дом 5</a>
           </li>
           <li class="footer__contact-item">
             <a class="footer__contact-link footer__contact-link--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </li>
         </ul>
-      </div>
-      <p class="footer__copyright">Разработано в
-        HTML Academy</p>
+      </section>
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано в
+        HTML Academy</a>
     </div>
   </footer>
 </body>

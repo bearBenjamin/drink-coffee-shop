@@ -9,5 +9,19 @@
   text-align: center;
   color: $base-white;
   background-color: $base-primary;
+  cursor: pointer;
 }
 
+.button:hover,
+.button:focus {
+  background-color: $alt-primary-lighter;
+}
+
+.button:active {
+  background-color: $alt-primary-darker;
+}
+
+.button:disabled {
+  background-color: $base-grey;
+  cursor: not-allowed;
+}

@@ -8,6 +8,24 @@
   padding: 0;
   border: none;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.form__filter-is-milk {
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .form__filter-title {
@@ -25,6 +43,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__slider-line {
@@ -32,6 +54,10 @@
   width: 100%;
   height: 2px;
   background-color: $alt-light-grey;
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
 }
 
 .form__slider-bar {
@@ -40,6 +66,14 @@
   width: 241px;
   height: 4px;
   background-color: $alt-primary-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
 }
 
 .form__slider-btn-toggle {
@@ -55,6 +89,23 @@
   cursor: pointer;
 }
 
+.form__slider-btn-toggle:hover::before,
+.form__slider-btn-toggle:focus::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $alt-primary-opacity;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.form__slider-btn-toggle:active::before {
+  background-color: $base-primary;
+}
+
 .form__slider-btn-min {
   left: 0;
 }
@@ -68,6 +119,10 @@
   justify-content: center;
   align-items: center;
   gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
 }
 
 .form__price-input {
@@ -81,10 +136,24 @@
   font-size: 16px;
   line-height: 150%;
   text-align: center;
+  cursor: pointer;
 
   &::placeholder {
     color: $base-grey;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.form__price-input:focus {
+  outline: none;
+  border-color: $alt-primary-darker;
 }
 
 // .form__price-min {}
@@ -97,6 +166,39 @@
 
 // .form__price-max {}
 
+.form__filter-group:disabled {
+  pointer-events: none;
+}
+
+.form__slider-btn-toggle:disabled {
+  border-color: $base-grey;
+  cursor: default;
+  background-color: $bg-lightest-grey;
+
+  &::before {
+    display: none;
+  }
+}
+
+.form__filter-group:disabled .form__slider-bar {
+  background-color: $base-grey;
+}
+
+.form__price-input:disabled {
+  border-color: $alt-light-grey;
+  color: $base-grey;
+  background-color: $bg-lightest-grey;
+  cursor: default;
+
+  &::placeholder {
+    color: $base-grey;
+  }
+}
+
+.form__filter-group:disabled .form__price-separator {
+  color: $base-grey;
+}
+
 .form__filter-list {
   margin: 0;
   padding: 0;
@@ -104,19 +206,24 @@
 }
 
 .form__filter-item {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .form__control {
   position: relative;
   padding-left: 34px;
   display: block;
+  cursor: pointer;
 }
 
 .form__control-checkbox {
   position: relative;
   padding-left: 52px;
   display: block;
+  cursor: pointer;
 }
 
 // .form__control-input {}
@@ -168,6 +275,17 @@
   border-color: $base-primary;
 }
 
+.form__control-checkbox:hover .form__control-marker-checkbox {
+  border: 2px solid $alt-primary-lighter;
+  background-color: $alt-primary-opacity;
+}
+
+.form__control-checkbox:hover .form__control-marker-checkbox::before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .form__control:hover .form__control-marker-radio::before {
   content: "";
   position: absolute;
@@ -185,12 +303,6 @@
 
 .form__control-input:disabled + .form__control-marker-checkbox {
   background-color: $alt-light-grey;
-}
-
-.form__control:has(.form__control-input:disabled),
-.form__control-checkbox:has(.form__control-input:disabled) {
-  cursor: not-allowed;
-  color: $alt-light-grey;
 }
 
 .form__control-input[type="radio"]:disabled:hover + .form__control-marker-radio::before {
@@ -212,11 +324,51 @@
   background-color: $base-primary;
 }
 
+.form__control-input:checked:disabled + .form__control-marker-radio::before {
+  background-color: $alt-light-grey;
+}
+
+.form__control-input:checked:disabled + .form__control-marker-radio {
+  border-color: $alt-light-grey;
+}
+
+.form__control:has(.form__control-input:disabled),
+.form__control-checkbox:has(.form__control-input:disabled) {
+  color: $alt-light-grey;
+  pointer-events: none;
+}
+
+.form__control-input:checked:disabled + .form__control-marker-checkbox {
+  background-color: $alt-light-grey;
+}
+
+.form__control-input:checked:disabled + .form__control-marker-checkbox::before {
+  background-color: $base-grey;
+  transform: translateX(18px);
+}
+
 .form__button-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 226px;
+    padding-right: 225px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.form__button {
+  @media (min-width: $tablet-width) {
+    padding: 8px 20px;
+  }
 }
 
 .form__button-submit {
@@ -227,4 +379,14 @@
   border-radius: 4px;
   color: $base-primary;
   background-color: $base-white;
+}
+
+.form__button-reset:hover,
+.form__button-reset:focus,
+.form__button-reset:disabled {
+  color: $base-white;
+}
+
+.form__button-reset:disabled {
+  background-color: $alt-light-grey;
 }

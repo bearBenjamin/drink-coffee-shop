@@ -24,12 +24,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 20px;
     width: 100%;
   }
 }
 
 .form__filter-title {
   margin-bottom: 20px;
+  padding: 0;
   font-family: $font-family;
   font-weight: 600;
   font-size: 16px;
@@ -46,6 +48,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
   }
 }
 
@@ -72,7 +78,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 274px;
+    width: 298px;
   }
 }
 
@@ -122,6 +128,10 @@
 
   @media (min-width: $tablet-width) {
     gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 21px;
   }
 }
 
@@ -230,7 +240,7 @@
 
 .form__control-marker-radio {
   position: absolute;
-  top: -1px;
+  top: 0;
   left: 0;
   width: 24px;
   height: 24px;
@@ -360,6 +370,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 11px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -373,12 +384,20 @@
 
 .form__button-submit {
   border-radius: 4px;
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 26px;
+  }
 }
 
 .form__button-reset {
   border-radius: 4px;
   color: $base-primary;
   background-color: $base-white;
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 34.5px;
+  }
 }
 
 .form__button-reset:hover,

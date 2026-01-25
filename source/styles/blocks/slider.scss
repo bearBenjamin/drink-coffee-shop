@@ -1,15 +1,15 @@
 // .slider {}
 
 .slider__window {
-  width: 280px;
+  width: 100%;
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    width: 728px;
+    //width: 728px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1360px;
+    //width: 1360px;
   }
 }
 
@@ -19,13 +19,18 @@
   list-style: none;
 
   display: flex;
+  transition: transform 0.5s ease-in-out;
 
   // @media (min-width: $desktop-width) {
   //   gap: 20px;
   // }
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+  }
 }
 
 .slider__gallery-item {
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 60px;
   color: $base-black;
@@ -88,6 +93,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 180px;
+    padding-left: 0;
     grid-area: 1 / 2 / 2 / 3;
     text-align: left;
   }
@@ -110,8 +116,9 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
-    padding-right: 65px;
+    padding-right: 0;
     grid-area: 2 / 2 / 3 / 3;
+    text-align: left;
   }
 }
 
@@ -169,6 +176,10 @@
   line-height: 200%;
   text-decoration: line-through;
   color: $base-primary;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 2px;
+  }
 }
 
 .slider__new-price {

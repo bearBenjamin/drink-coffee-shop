@@ -52,37 +52,73 @@
   @media (min-width: $tablet-width) {
     display: flex;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 21px;
+  }
+}
+
+.main-nav__list--open {
+  position: absolute;
+  top: 60px;
+  left: -20px;
+  z-index: 2;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: $base-white;
 }
 
 .main-nav__item {
+  border-top: 1px solid $base-secondary;
   font-weight: 500;
   font-size: 12px;
   line-height: 133%;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
+.main-nav__item:last-child {
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .main-nav__item-link {
-  position: relative;
   display: block;
-  padding: 32px 20px;
+  padding: 20px 128.5px 21px;
   color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 32px 20px;
+  }
 }
 
 .main-nav__item-link--current {
-  color: $base-primary;
-  cursor: default;
+  @media (min-width: $tablet-width) {
+    color: $base-primary;
+    cursor: default;
+  }
 }
 
 .main-nav__item-link--current::after {
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: $base-primary;
+  @media (min-width: $tablet-width) {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $base-primary;
+  }
 }
 
 .main-nav__item-link:hover:not(.main-nav__item-link--current),
@@ -102,7 +138,7 @@
 
   display: flex;
   min-width: 120px;
-  margin-right: 60px;
+  margin-right: 40px;
 
   @media (min-width: $tablet-width) {
     margin-right: 0;
@@ -136,7 +172,7 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 21px;
     display: flex;
     align-items: center;
     justify-content: center;

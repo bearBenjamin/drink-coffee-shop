@@ -77,6 +77,13 @@
   }
 }
 
+.advantages__item-convenience {
+  @media (min-width: $desktop-width) {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}
+
 .advantages__item-title {
   margin: 0;
   padding-right: 10px;

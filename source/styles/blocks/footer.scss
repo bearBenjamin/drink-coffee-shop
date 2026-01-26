@@ -1,6 +1,8 @@
 .footer {
   padding-top: 20px;
   padding-bottom: 30px;
+  color: $base-black;
+  background-color: $base-white;
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
@@ -74,8 +76,6 @@
   }
 }
 
-// .footer__logo-img-wrapper {}
-
 .footer__logo-img {
   display: block;
   width: 82px;
@@ -106,6 +106,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 
@@ -114,8 +115,6 @@
     margin-bottom: 25px;
   }
 }
-
-// .footer__social-item {}
 
 .footer__social-link {
   position: relative;
@@ -225,7 +224,6 @@
     display: none;
   }
 }
-
 
 .footer__shop-nav-title,
 .footer__media-nav-title,
@@ -352,10 +350,6 @@
   @media (min-width: $tablet-width) {
     gap: 8px;
   }
-
-  // @media (min-width: $desktop-width) {
-  //   gap: 8px;
-  // }
 }
 
 .footer__contact-item {
@@ -367,10 +361,6 @@
   @media (min-width: $tablet-width) {
     padding-top: 8px;
   }
-
-  // @media (min-width: $desktop-width) {
-  //   padding-top: 8px;
-  // }
 }
 
 .footer__contact-link {

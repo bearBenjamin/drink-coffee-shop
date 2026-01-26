@@ -24,7 +24,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    // margin-top: 20px;
     width: 100%;
   }
 }
@@ -42,65 +41,81 @@
   }
 }
 
+.form__filter-title--range {
+  margin-bottom: 31px;
+}
+
 .form__slider-container {
   width: 100%;
   height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 11px;
   }
 }
 
-.form__slider-line {
-  position: relative;
-  width: 100%;
-  height: 2px;
+/* stylelint-disable selector-class-pattern */
+.noUi-target {
   background-color: $alt-light-grey;
-
-  @media (min-width: $desktop-width) {
-    width: 318px;
-  }
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: 2px;
 }
 
-.form__slider-bar {
-  position: absolute;
-  top: -1px;
-  width: 260px;
+.noUi-connects {
+
   height: 4px;
-  background-color: $alt-primary-lighter;
-
-  @media (min-width: $tablet-width) {
-    width: 203px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 298px;
-  }
+  top: -1px;
 }
 
-.form__slider-btn-toggle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.noUi-connect {
+  background-color: $alt-primary-lighter;
+}
+
+.noUi-handle {
   padding: 0;
-  width: 24px;
-  height: 24px;
   background-color: $base-white;
   border: 2px solid $alt-primary-lighter;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: none;
 }
 
-.form__slider-btn-toggle:hover::before,
-.form__slider-btn-toggle:focus::before {
+.noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  top: -11px;
+}
+
+.noUi-horizontal .noUi-handle-lower {
+  right: -24px;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -8px;
+
+  @media (min-width: $tablet-width) {
+    right: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -12px;
+  }
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+  display: none;
+}
+
+.noUi-handle:hover::before,
+.noUi-handle:focus::before {
   content: "";
   display: block;
   width: 16px;
@@ -112,17 +127,10 @@
   left: 2px;
 }
 
-.form__slider-btn-toggle:active::before {
+.noUi-handle:active::before {
   background-color: $base-primary;
 }
-
-.form__slider-btn-min {
-  left: 0;
-}
-
-.form__slider-btn-max {
-  right: 0;
-}
+/* stylelint-enable selector-class-pattern */
 
 .form__price-container {
   display: flex;
@@ -151,10 +159,7 @@
   line-height: 150%;
   text-align: center;
   cursor: pointer;
-
-  &::placeholder {
-    color: $base-grey;
-  }
+  appearance: textfield;
 
   @media (min-width: $tablet-width) {
     width: 87px;
@@ -165,20 +170,24 @@
   }
 }
 
-.form__price-input:focus {
-  outline: none;
-  border-color: $alt-primary-darker;
+.form__price-min {
+  color: $base-grey;
 }
 
-// .form__price-min {}
+/* как вариант обойти, хотя бы частично JS для range-slider, он перекрывает placeholder */
+
+.form__price-min:focus,
+.form__price-max:focus {
+  outline: none;
+  border-color: $alt-primary-darker;
+  color: $base-black;
+}
 
 .form__price-separator {
   width: 8px;
   height: 2px;
   background-color: $base-grey;
 }
-
-// .form__price-max {}
 
 .form__filter-group:disabled {
   pointer-events: none;
@@ -244,7 +253,11 @@
   cursor: pointer;
 }
 
-// .form__control-input {}
+.form__control-label {
+  max-width: 250px;
+  display: inline-block;
+  overflow-wrap: break-word;
+}
 
 .form__control-marker-radio {
   position: absolute;

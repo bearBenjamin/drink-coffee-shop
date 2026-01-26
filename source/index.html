@@ -189,18 +189,9 @@
         <h3 class="title form-catalog__title">Каталог кофейных напитков</h3>
         <form class="form-catalog__form form" action="https://echo.htmlacademy.ru" method="GET" id="form-catalog">
           <fieldset class="form__filter-group form__filter-price">
-            <legend class="form__filter-title">Цена</legend>
+            <legend class="form__filter-title form__filter-title--range">Цена</legend>
             <div class="form__slider-container">
-              <div class="form__slider-line">
-                <div class="form__slider-bar">
-                  <button class="form__slider-btn-toggle form__slider-btn-min" type="button">
-                    <span class="visually-hidden">Слайдер минимальной стоимости</span>
-                  </button>
-                  <button class="form__slider-btn-toggle form__slider-btn-max" type="button">
-                    <span class="visually-hidden">Слайдер максимальной стоимости</span>
-                  </button>
-                </div>
-              </div>
+              <div class="form__slider" id="slider"></div>
             </div>
             <div class="form__price-container">
               <input class="form__price-input form__price-min" type="number" name="price-min" id="min" min="0" max="9999" step="1" placeholder="0">
@@ -310,7 +301,7 @@
               <p class="catalog__item-price">225₽</p>
               <button class="button catalog__item-button" type="button">В корзину</button>
             </li>
-            <li class="catalog__item">
+            <li class="catalog__item catalog__item--shadow">
               <div class="catalog__item-img-container">
                 <picture>
                   <source width="130" height="188" type="image/webp" srcset="images/catalog/product-2@1x.webp 1x, images/catalog/product-2@2x.webp 2x">

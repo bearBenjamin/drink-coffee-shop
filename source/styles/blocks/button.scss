@@ -10,6 +10,7 @@
   color: $base-white;
   background-color: $base-primary;
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .button:hover,

@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
   color: $base-black;
+  background-color: $base-white;
 }
 
 .main-nav__logo-link {
@@ -13,8 +14,6 @@
     margin-right: 0;
   }
 }
-
-// .main-nav__logo-img-wrapper {}
 
 .main-nav__logo-img {
   display: block;
@@ -51,6 +50,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     padding-left: 6px;
   }
 
@@ -139,6 +139,7 @@
   list-style: none;
 
   display: flex;
+  flex-wrap: wrap;
   min-width: 120px;
   margin-right: 40px;
 

@@ -1,16 +1,6 @@
-// .slider {}
-
 .slider__window {
   width: 100%;
   overflow: hidden;
-
-  @media (min-width: $tablet-width) {
-    //width: 728px;
-  }
-
-  @media (min-width: $desktop-width) {
-    //width: 1360px;
-  }
 }
 
 .slider__gallery {
@@ -21,9 +11,6 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
 
-  // @media (min-width: $desktop-width) {
-  //   gap: 20px;
-  // }
   @media (min-width: $desktop-width) {
     gap: 40px;
   }
@@ -40,7 +27,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
-    // place-items: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -152,7 +138,7 @@
   width: 100%;
   max-width: 230px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-shrink: 0;
   align-items: center;
 
@@ -176,6 +162,7 @@
   line-height: 200%;
   text-decoration: line-through;
   color: $base-primary;
+  overflow-wrap: break-word;
 
   @media (min-width: $desktop-width) {
     padding-bottom: 2px;
@@ -190,6 +177,7 @@
   font-size: 20px;
   line-height: 160%;
   $color: base-black;
+  overflow-wrap: break-word;
 }
 
 .slider__item-button {
@@ -200,6 +188,7 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  overflow-wrap: break-word;
 }
 
 .slider__btn-conteiner {
@@ -209,7 +198,6 @@
   left: 0;
   display: flex;
   width: 100%;
-  // gap: 280px;
   justify-content: space-between;
   pointer-events: none;
 

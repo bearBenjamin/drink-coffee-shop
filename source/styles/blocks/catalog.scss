@@ -10,13 +10,15 @@
 }
 
 .catalog__select {
+  padding-left: 2px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 
   @media (min-width: $tablet-width) {
+    padding-left: 0;
     margin-left: auto;
-    gap: 10px;
+    // gap: 10px;
   }
 }
 
@@ -58,7 +60,7 @@
   height: 10px;
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 7px;
   transform: translateY(-50%);
   background-color: $base-primary;
   mask-image: url("../../icons/stack.svg#arrow-select");
@@ -66,6 +68,10 @@
   mask-size: contain;
   transition: transform 0.2s ease-in-out;
   pointer-events: none;
+
+  @media (min-width: $desktop-width) {
+    right: 10px;
+  }
 }
 
 .catalog__select-wrapper:active::after {
@@ -88,7 +94,7 @@
 
   @media (min-width: $tablet-width) {
     flex-flow: wrap row;
-    gap: 30px;
+    gap: 31px 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -112,7 +118,7 @@ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   @media (min-width: $tablet-width) {
     padding: 30px;
     width: 349px;
-    column-gap: 99px;
+    column-gap: 98px;
   }
 
   @media (min-width: $desktop-width) {
@@ -149,8 +155,15 @@ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   font-size: 18px;
   line-height: 178%;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 150%;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
+    padding-right: 15px;
     font-size: 24px;
     line-height: 150%;
   }
@@ -163,8 +176,13 @@ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   font-size: 14px;
   line-height: 143%;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 20px;
+    padding-right: 25px;
   }
 }
 
@@ -192,6 +210,10 @@ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   font-size: 14px;
   line-height: 143%;
   color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 16px;
+  }
 }
 
 .catalog__pagination {
@@ -199,8 +221,13 @@ box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
   display: flex;
   gap: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
     margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 35px;
   }
 }
 

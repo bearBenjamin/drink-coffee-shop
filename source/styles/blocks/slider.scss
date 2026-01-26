@@ -307,7 +307,7 @@
 .slider__btn:disabled {
   background-color: inherit;
   background-image: none;
-  cursor: not-allowed;
+  cursor: default;
 }
 
 .slider__btn:disabled::after {

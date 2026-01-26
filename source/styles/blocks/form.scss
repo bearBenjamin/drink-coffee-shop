@@ -24,18 +24,22 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 20px;
+    // margin-top: 20px;
     width: 100%;
   }
 }
 
 .form__filter-title {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding: 0;
   font-family: $font-family;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__slider-container {
@@ -69,12 +73,12 @@
 .form__slider-bar {
   position: absolute;
   top: -1px;
-  width: 241px;
+  width: 260px;
   height: 4px;
   background-color: $alt-primary-lighter;
 
   @media (min-width: $tablet-width) {
-    width: 192px;
+    width: 203px;
   }
 
   @media (min-width: $desktop-width) {
@@ -220,6 +224,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+}
+
+.form__filter-item:last-child {
+  margin-bottom: 0;
 }
 
 .form__control {

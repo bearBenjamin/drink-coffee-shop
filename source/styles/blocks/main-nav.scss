@@ -51,9 +51,11 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    padding-left: 6px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-left: 0;
     gap: 21px;
   }
 }

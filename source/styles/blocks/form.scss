@@ -170,6 +170,12 @@
   }
 }
 
+.form__price-input::-webkit-outer-spin-button,
+.form__price-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .form__price-min {
   color: $base-grey;
 }

@@ -219,4 +219,15 @@
 
 .main-nav__secondary-item-link:hover {
   background-color: $base-secondary;
+
+  @media (min-width: 1440px) {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+}
+
+.main-nav__secondary-item-link:active {
+  @media (min-width: 1440px) {
+    background-color: $base-secondary;
+  }
 }

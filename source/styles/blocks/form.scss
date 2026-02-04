@@ -303,7 +303,7 @@
 }
 
 .form__control:hover .form__control-marker-radio {
-  border-color: $base-primary;
+  border-color: $alt-primary-lighter;
 }
 
 .form__control-checkbox:hover .form__control-marker-checkbox {
@@ -325,7 +325,7 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: $alt-primary-lighter;
+  background-color: $alt-primary-opacity;
 }
 
 .form__control-input:disabled + .form__control-marker-radio {
@@ -355,6 +355,23 @@
   background-color: $base-primary;
 }
 
+.form__control-input:focus-visible + .form__control-marker-radio {
+  outline: 2px solid $alt-primary-lighter;
+  outline-offset: -2px;
+}
+
+.form__control-input[type="radio"]:focus-visible + .form__control-marker-radio::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $alt-primary-opacity;
+}
+
+
 .form__control-input:checked:disabled + .form__control-marker-radio::before {
   background-color: $alt-light-grey;
 }
@@ -376,6 +393,15 @@
 .form__control-input:checked:disabled + .form__control-marker-checkbox::before {
   background-color: $base-grey;
   transform: translateX(18px);
+}
+
+.form__control-input:focus-visible + .form__control-marker-checkbox {
+  outline: 2px solid $alt-primary-lighter;
+  background-color: $alt-primary-opacity;
+}
+
+.form__control-input:not(:checked):focus-visible + .form__control-marker-checkbox {
+  background-color: $alt-primary-opacity;
 }
 
 .form__button-container {

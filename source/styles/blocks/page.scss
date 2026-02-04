@@ -4,6 +4,7 @@
 
 .page__body {
   display: grid;
+  min-width: 320px;
   min-height: 100%;
   margin: 0;
   grid-template-rows: min-content 1fr min-content;
